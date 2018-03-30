@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="table"></div>
+    <script>
+        function multiplicationTable([number]) {
+            let output = `<table border='1'>\n`
+            output += `<tr>\n`
+            output += `<th>"x"</th>\n`
+            for (let i = 1; i <= number; i++) {
+                output += `<th>${i}</th>\n`
+            }
+            output += `</tr>\n`
+            for (let i = 1; i <= number; i++) {
+                output += `<tr>\n`
+                output += `<th>${i}</th>\n`
+
+                for (let j = 1; j <= number; j++) {
+                    output += `<td>${j * i}</td >\n`
+
+                }
+                output += `</tr >\n`
+            }
+            output += `</table>\n`
+           return output
+        }
+        document.getElementById('table').innerHTML = multiplicationTable([5])
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
